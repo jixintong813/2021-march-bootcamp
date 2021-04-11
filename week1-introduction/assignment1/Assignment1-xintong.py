@@ -15,14 +15,14 @@
 
 
 def factorial(x: int) -> int:
-    if x>=0:
-        if x==0 or x==1:
-            return 1
-        else:
-            return(x * factorial(x-1))
-    else: print("There is no result.")
-
-
+    if x<1:
+        return -1
+    else:
+        for i in range(1,x + 1):
+            result *= i
+    return result
+        
+    
 assert factorial(0) == 1
 assert factorial(1) == 1
 assert factorial(9) == 362880
@@ -48,7 +48,6 @@ assert print_sum(5) == "15"
 # Q3. Write a program to check is a year is leap year (x is always > 0)
 
 def is_leap_year(year: int) -> bool:
-    def is_leap_year(year: int) -> bool:
     if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0):
          return print("leap year")
     return print("not leap year")
@@ -63,7 +62,7 @@ assert not is_leap_year(2001)
 # Q4. Write a program to convert a list of lowercase words to uppercase words.
 
 def to_upper_case(words: [str]) -> [str]:
-    w=list(map(str.upper,words))
+    w = list(map(str.upper,words))
     return w
 
 
@@ -82,10 +81,3 @@ assert not xor(True, True)
 assert xor(True, False)
 assert xor(False, True)
 assert not xor(False, False)
-
-
-# In[ ]:
-
-
-
-
