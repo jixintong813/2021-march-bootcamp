@@ -12,10 +12,6 @@
 # * algorithm
 # * check return
 # 
-
-# In[2]:
-
-
 # Instruction: make sure your code pass the assertion statements
 
 # Q1. Given a positive integer N. The task is to write a Python program to check if the number is prime or not.
@@ -77,12 +73,9 @@ assert selection_sort([[1, 100], [2, 70], [3, 95], [4, 66], [5, 98]]) == [[4, 66
 # tips: copy operation - copy by value, copy by reference
 # 123, String, immutable (copy by value)
 # mutable, list, dict... (copy by reference)
-def convert(tup, di) -> None:
-    l0 = list(tup)
-    l1 = l0[::2]
-    l2 = l0[1::2]
-    new_d = dict(zip(l1,l2))
-    new_dict = di.update(new_d)
+def convert(tup:(any), di:{any,any}) -> None:
+    for i in range(0,len(tup),2):
+        di[tup[i]] = tup[i+1]
     pass
 
 # DO NOT ALTER BELOW.
